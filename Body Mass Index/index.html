@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Body Mass Check</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section>
+        <h1>Body Mass Check</h1>
+        <form action="" id="bmi-form">
+            <p style="text-align: left">
+                <label class="labelDisplay" for="weight">Weight (pounds)</label><input class="formEntry" type="text" name="weight" placeholder="required" />
+                <label class="labelDisplay" for="weight">Height (inches)</label><input class="formEntry" type="text" name="weight" placeholder="required" />
+            </p>
+            <p>
+                <button class="inputButton" type="button" id="calculate">calculate</button>
+                <button class="inputButton" type="reset" id="reset">Reset</button>
+                <hr>
+            </p>
+            <p id="bmi" style="font-size: 20pt; font-weight: 900; text-align: center;"></p>
+            <p>(Normal: 18.5 to 25)</p>
+        </form>
+    </section>
+    <script>
+        window.document.load = getFocus();
+
+        document.getElementById("calculate").addEventListener("click", function() {
+            var weight = eval(parseFloat(document.getElementById("weight").value));
+            var height = eval(parseFloat(document.getElementById("height").value));
+            if (weight == "" || height == "")
+                document.getElementById("bmi").innerHTML = "You need to enter a valid number for weight";
+            else if (isNaN(weight) || isNaN(height))
+                document.getElementById("bmi").innerHTML = "You need to enter a valid numger for weight";
+            else {
+                var bmi = (weight * 703) / (height * height);
+                document.getElementById("bmi").innerHTML = "Your BMI is: " + Math.floor(bmi);
+            }
+        });
+        document.getElementById("reset").addEventListener("click", getFocus);
+
+        function getFocus() {
+            document.getElementById("weight").focus();
+            document.getElementById("bmi").innerHTML = " ";
+        }
+    </script>
+</body>
+
+</html>

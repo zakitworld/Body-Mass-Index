@@ -1,0 +1,55 @@
+body {
+    font-family: sans-serif;
+    background-image: url("pexels-andrea-piacquadio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ad4d1a;
+    font-weight: 14pt;
+}
+
+section {
+    margin-left: 100px;
+    background-color: linen;
+    width: 500px;
+    padding: 10px;
+    box-shadow: 10px 10px 10px #ad856f;
+}
+
+h1 {
+    font-size: 28pt;
+    text-align: center;
+}
+
+input:focus {
+    background-color: #ad4d1a;
+    color: white;
+}
+
+p {
+    text-align: center;
+    font-size: 14pt;
+    font-weight: 900;
+}
+
+.inputButton {
+    font-size: 14pt;
+    width: 100px;
+    height: 30px;
+    font-size: 12pt;
+    background-color: #cb9e87;
+    color: white;
+}
+
+.formEntry {
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    font-size: 14pt;
+    color: #ad4d1a;
+}
+
+.labelDisplay {
+    width: 250px;
+    text-align: right;
+    float: left;
+}
